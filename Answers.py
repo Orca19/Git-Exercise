@@ -12,7 +12,10 @@ class Converter:
         self.voltage  = voltage
         print(f'Voltage updated to {self.voltage} volt')
 
-con  = Converter(3)
-print(con.ToDigital())
-print(con.SetAnalogValue(0b1111111110))
+cur_Voltage = float(input("Enter the current voltage "))
+con  = Converter(cur_Voltage)
+print("The current digital number is ",con.ToDigital())
+digital = int(input("Enter current digital number in binary base "), base=2)
+con.SetAnalogValue(digital)
+
 
